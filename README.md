@@ -30,6 +30,8 @@
 
 ```
 smart-travel
+├── docker-compose.yml           # Docker 中间件一键部署
+├── .github/                     # Issue/PR 模板
 ├── smart-travel-common      # 公共模块：JWT、Redis工具、缓存、拦截器、OSS
 ├── smart-travel-gateway     # 主启动入口（端口 8080）
 ├── smart-travel-user        # 用户模块：注册/登录、签到、JWT认证
@@ -78,10 +80,33 @@ smart-travel
 
 - JDK 17+
 - Maven 3.8+
-- MySQL 8.0+
-- Redis 6.0+
-- Elasticsearch 8.x
-- RabbitMQ 3.x
+- Docker & Docker Compose（推荐）
+
+### 方式一：Docker Compose 一键部署中间件（推荐）
+
+```bash
+# 1. 创建必要目录
+mkdir -p /root/mysql/conf /root/mysql/data /root/mysql/init
+mkdir -p /root/redis/conf /root/redis/data
+
+# 2. 创建 Redis 配置文件
+echo "bind 0.0.0.0" > /root/redis/conf/redis.conf
+echo "protected-mode no" >> /root/redis/conf/redis.conf
+
+# 3. 启动所有中间件（MySQL、Redis、RabbitMQ、Elasticsearch）
+docker-compose up -d
+
+# 4. 初始化数据库（将 SQL 文件放入 init 目录自动执行）
+cp smart-travel-gateway/src/main/resources/db/smart_travel.sql /root/mysql/init/
+
+# 5. 安装 Elasticsearch IK 分词器插件
+docker exec -it es /bin/bash
+./bin/elasticsearch-plugin install https://get.infini.cloud/elasticsearch/analysis-ik/8.12.0
+exit
+docker restart es
+```
+
+### 方式二：手动部署
 
 ### 1. 克隆项目
 
