@@ -167,6 +167,26 @@ mvn spring-boot:run
 - **数据一致性**：MySQL 更新 → ES 同步 → Redis 缓存同步，多级数据一致性
 - **多模块架构**：9 个 Maven 模块，高内聚低耦合
 
+## 参与贡献
+
+欢迎提交 Issue 和 Pull Request！
+
+1. Fork 本仓库
+2. 创建分支：`git checkout -b feat/你的功能`
+3. 提交代码：`git commit -m "feat: 功能描述"`
+4. 推送分支：`git push origin feat/你的功能`
+5. 提交 Pull Request
+
+### 提交规范
+
+| 前缀 | 用途 |
+|------|------|
+| `feat:` | 新功能 |
+| `fix:` | 修复 Bug |
+| `docs:` | 文档更新 |
+| `refactor:` | 代码重构 |
+| `perf:` | 性能优化 |
+
 ## License
 
 MIT License
