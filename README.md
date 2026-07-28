@@ -1,6 +1,6 @@
 # 智游天下 - 智慧旅游综合服务平台
 
-> 基于 Spring Boot 3.2.5 + Java 17 的智慧旅游综合服务平台
+> 基于 Spring Boot 3.2.5 + Java 17 的智慧旅游综合服务平台（仅后端）
 
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.5-brightgreen)](https://spring.io/projects/spring-boot)
 [![Java](https://img.shields.io/badge/Java-17-orange)](https://www.oracle.com/java/)
@@ -8,7 +8,7 @@
 
 ## 项目简介
 
-智游天下是一个集景点搜索、门票秒杀、路线规划、游记社区、社交互动、轨迹打卡于一体的智慧旅游平台。采用 Maven 多模块架构，前后端分离设计，后端提供 50+ RESTful API 接口。
+智游天下是一个集景点搜索、门票秒杀、路线规划、游记社区、社交互动、轨迹打卡于一体的智慧旅游平台。采用 Maven 多模块架构，**本项目仅实现后端服务**，提供 50+ RESTful API 接口，推荐使用 Knife4j 接口文档（`/doc.html`）或 Postman 进行接口调试。
 
 ## 技术架构
 
