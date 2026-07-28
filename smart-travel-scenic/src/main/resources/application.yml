@@ -1,0 +1,9 @@
+spring:
+  application:
+    name:
+      smart-travel-scenic
+  elasticsearch:
+    uris: ${ES_URIS:http://localhost:9200}
+
+amap:
+  key: ${AMAP_KEY}

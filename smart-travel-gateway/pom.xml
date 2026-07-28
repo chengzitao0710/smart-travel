@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.smarttravel</groupId>
+        <artifactId>smart-travel-parent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <artifactId>smart-travel-gateway</artifactId>
+    <name>smart-travel-gateway</name>
+    <description>智游天下 - 智慧旅游平台 启动模块</description>
+
+    <properties>
+        <java.version>17</java.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.smarttravel</groupId>
+            <artifactId>smart-travel-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.smarttravel</groupId>
+            <artifactId>smart-travel-scenic</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.smarttravel</groupId>
+            <artifactId>smart-travel-route</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.smarttravel</groupId>
+            <artifactId>smart-travel-social</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.smarttravel</groupId>
+            <artifactId>smart-travel-ticket</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.smarttravel</groupId>
+            <artifactId>smart-travel-trajectory</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.smarttravel</groupId>
+            <artifactId>smart-travel-travel</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.smarttravel</groupId>
+            <artifactId>smart-travel-user</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>3.0.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                        <mainClass>com.smarttravel.gateway.SmartTravelApplication</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

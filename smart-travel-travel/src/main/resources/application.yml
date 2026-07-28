@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: smart-travel-travel
+  elasticsearch:
+    uris: ${ES_URIS:http://localhost:9200}
